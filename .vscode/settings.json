@@ -1,0 +1,29 @@
+{
+  "dbt.projectSubPath": ".",
+  "dbt.profilesDir": ".",
+  "dbt.enableAutocompletion": true,
+  "dbt.enableSyntaxChecking": true,
+  "dbt.enableSqlFluff": true,
+  "dbt.enableHoverHelp": true,
+  "dbt.enableErrorChecking": true,
+  
+  "sqlfluff.parser": {
+    "dialect": "snowflake"
+  },
+  
+  "[sql]": {
+    "editor.defaultFormatter": "dbt.dbt",
+    "editor.formatOnSave": true
+  },
+  
+  "[yaml]": {
+    "editor.formatOnSave": true,
+    "editor.tabSize": 2
+  },
+  
+  "files.exclude": {
+    "**/target": true,
+    "**/dbt_packages": true,
+    "**/logs": true
+  }
+}

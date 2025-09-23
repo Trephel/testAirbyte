@@ -1,0 +1,76 @@
+[0m16:20:31.076650 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF45901A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF2221E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF55E3ED0>]}
+
+
+============================== 16:20:31.082994 | d363b0e2-ca88-423d-9f34-0ebe98da7b3f ==============================
+[0m16:20:31.082994 [info ] [MainThread]: Running with dbt=1.10.11
+[0m16:20:31.084236 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'log_path': 'logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:20:31.104289 [info ] [MainThread]: dbt version: 1.10.11
+[0m16:20:31.105163 [info ] [MainThread]: python version: 3.13.7
+[0m16:20:31.106142 [info ] [MainThread]: python path: C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\.venv\Scripts\python.exe
+[0m16:20:31.106906 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m16:20:31.520524 [info ] [MainThread]: Using profiles dir at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project
+[0m16:20:31.521431 [info ] [MainThread]: Using profiles.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\profiles.yml
+[0m16:20:31.522232 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml
+[0m16:20:31.523356 [info ] [MainThread]: adapter type: snowflake
+[0m16:20:31.523871 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:20:31.524470 [info ] [MainThread]: Configuration:
+[0m16:20:31.524946 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:20:31.525352 [info ] [MainThread]:   dbt_project.yml file [[31mERROR not found[0m]
+[0m16:20:31.525747 [info ] [MainThread]: Required dependencies:
+[0m16:20:31.526158 [debug] [MainThread]: Executing "git --help"
+[0m16:20:31.530870 [info ] [MainThread]:  - git [[31mERROR[0m]
+
+[0m16:20:31.531897 [info ] [MainThread]: Connection:
+[0m16:20:31.532684 [info ] [MainThread]:   account: votre-compte.region
+[0m16:20:31.533309 [info ] [MainThread]:   user: votre-utilisateur
+[0m16:20:31.533886 [info ] [MainThread]:   database: AVITO_DEV
+[0m16:20:31.534528 [info ] [MainThread]:   warehouse: TRANSFORMING_WH
+[0m16:20:31.535115 [info ] [MainThread]:   role: TRANSFORMER
+[0m16:20:31.535770 [info ] [MainThread]:   schema: analytics
+[0m16:20:31.536319 [info ] [MainThread]:   authenticator: None
+[0m16:20:31.536775 [info ] [MainThread]:   oauth_client_id: None
+[0m16:20:31.537153 [info ] [MainThread]:   query_tag: None
+[0m16:20:31.537587 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:20:31.538288 [info ] [MainThread]:   host: None
+[0m16:20:31.539433 [info ] [MainThread]:   port: None
+[0m16:20:31.540537 [info ] [MainThread]:   proxy_host: None
+[0m16:20:31.541596 [info ] [MainThread]:   proxy_port: None
+[0m16:20:31.542382 [info ] [MainThread]:   protocol: None
+[0m16:20:31.543105 [info ] [MainThread]:   connect_retries: 1
+[0m16:20:31.543926 [info ] [MainThread]:   connect_timeout: None
+[0m16:20:31.544898 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:20:31.545641 [info ] [MainThread]:   retry_all: False
+[0m16:20:31.546199 [info ] [MainThread]:   insecure_mode: False
+[0m16:20:31.546797 [info ] [MainThread]:   reuse_connections: True
+[0m16:20:31.547497 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:20:31.548260 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m16:20:31.926811 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:20:31.994255 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:20:31.994950 [debug] [MainThread]: On debug: select 1 as id
+[0m16:20:31.995477 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:20:37.001710 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m16:20:37.002181 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m16:20:37.003826 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:20:37.004572 [info ] [MainThread]: [31m3 checks failed:[0m
+[0m16:20:37.005244 [info ] [MainThread]: Project loading failed for the following reason:
+ project path <C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml> not found
+
+[0m16:20:37.005842 [info ] [MainThread]: Error from git --help: Could not find command, ensure it is in the user's PATH and that the user has permissions to run it: "git"
+
+[0m16:20:37.006630 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post votre-compte.region.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:20:37.007870 [debug] [MainThread]: Command `dbt debug` failed at 16:20:37.007678 after 6.07 seconds
+[0m16:20:37.008294 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:20:37.008570 [debug] [MainThread]: On debug: No close available on handle
+[0m16:20:37.008868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF7669A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF7B484D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF75DD7B0>]}
+[0m16:20:37.009228 [debug] [MainThread]: Flushing usage events
+[0m16:20:38.188831 [debug] [MainThread]: An error was encountered while trying to flush usage events

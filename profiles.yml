@@ -1,0 +1,14 @@
+avito_snowflake:
+  target: dev
+  outputs:
+    dev:
+      type: snowflake
+      account: "votre-compte.region"
+      user: "votre-utilisateur"
+      password: "votre-mot-de-passe"
+      role: "TRANSFORMER"
+      database: "AVITO_DEV"
+      warehouse: "TRANSFORMING_WH"
+      schema: "analytics"
+      threads: 4
+      client_session_keep_alive: false

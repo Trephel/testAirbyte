@@ -1,0 +1,33 @@
+{
+  "dbt Model": {
+    "prefix": "dbtmodel",
+    "body": [
+      "{{",
+      "    config(",
+      "        materialized='${1|view,table,ephemeral|}',",
+      "        schema='${2:staging}'",
+      "    )",
+      "}}",
+      "",
+      "SELECT",
+      "    $0",
+      "FROM {{ ref('${3:source_model}') }}"
+    ],
+    "description": "Create a new dbt model"
+  },
+  
+  "dbt Source": {
+    "prefix": "dbtsource",
+    "body": [
+      "version: 2",
+      "",
+      "sources:",
+      "  - name: ${1:source_name}",
+      "    schema: ${2:schema_name}",
+      "    tables:",
+      "      - name: ${3:table_name}",
+      "        description: \"${4:Table description}\""
+    ],
+    "description": "Define dbt sources"
+  }
+}

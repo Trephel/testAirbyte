@@ -1,0 +1,35 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    description: "Source raw depuis Airbyte"
+    schema: "{{ env_var('SNOWFLAKE_RAW_SCHEMA', 'raw_data') }}"
+    tables:
+      - name: avito_car_dataset
+        description: "Dataset brut des voitures Avito"
+        columns:
+          - name: "Unnamed: 0"
+            description: "ID original du dataset"
+          - name: "Lien"
+            description: "URL de l'annonce Avito"
+          - name: "Ville"
+            description: "Ville de localisation"
+          - name: "Marque"
+            description: "Marque du véhicule"
+
+models:
+  - name: stg_avito_cars
+    description: "Table staging nettoyée pour les voitures Avito"
+    columns:
+      - name: source_id
+        description: "ID source depuis le dataset original"
+        tests:
+          - unique
+          - not_null
+          
+      - name: brand
+        description: "Marque du véhicule (nettoyée)"
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Fiat', 'Renault', 'Peugeot', 'Citroen', 'Volkswagen', 'BMW', 'Mercedes', 'Audi']

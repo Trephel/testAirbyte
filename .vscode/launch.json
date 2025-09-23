@@ -1,0 +1,27 @@
+{
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "name": "dbt run",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/bin/dbt",
+      "args": ["run"],
+      "console": "integratedTerminal",
+      "env": {
+        "DBT_PROFILES_DIR": "${workspaceFolder}"
+      }
+    },
+    {
+      "name": "dbt test",
+      "type": "python",
+      "request": "launch",
+      "program": "${workspaceFolder}/.venv/bin/dbt",
+      "args": ["test"],
+      "console": "integratedTerminal",
+      "env": {
+        "DBT_PROFILES_DIR": "${workspaceFolder}"
+      }
+    }
+  ]
+}
