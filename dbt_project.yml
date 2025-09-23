@@ -1,0 +1,28 @@
+name: 'avito_data_pipeline'
+version: '1.0.0'
+config-version: 2
+
+profile: 'avito_snowflake'
+
+model-paths: ["models"]
+analysis-paths: ["analyses"]
+test-paths: ["tests"]
+seed-paths: ["seeds"]
+macro-paths: ["macros"]
+snapshot-paths: ["snapshots"]
+
+target-path: "target"
+clean-targets:
+  - "target"
+  - "dbt_packages"
+
+models:
+  avito_data_pipeline:
+    staging:
+      avito:
+        +materialized: view
+        +schema: staging
+    marts:
+      core:
+        +materialized: table
+        +schema: analytics

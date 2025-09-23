@@ -74,3 +74,357 @@ https://docs.getdbt.com/docs/configure-your-profile
 [0m16:20:37.008868 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF7669A70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF7B484D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001BFF75DD7B0>]}
 [0m16:20:37.009228 [debug] [MainThread]: Flushing usage events
 [0m16:20:38.188831 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:58:19.665705 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE02EA41A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE00BA1E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE03EF7ED0>]}
+
+
+============================== 16:58:19.669921 | ba71a261-5a46-4630-b3c7-7fcc44886fdd ==============================
+[0m16:58:19.669921 [info ] [MainThread]: Running with dbt=1.10.11
+[0m16:58:19.671078 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'use_colors': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'version_check': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'empty': 'None', 'log_path': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m16:58:19.690873 [info ] [MainThread]: dbt version: 1.10.11
+[0m16:58:19.691690 [info ] [MainThread]: python version: 3.13.7
+[0m16:58:19.692457 [info ] [MainThread]: python path: C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\.venv\Scripts\python.exe
+[0m16:58:19.693186 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m16:58:20.125363 [info ] [MainThread]: Using profiles dir at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project
+[0m16:58:20.126110 [info ] [MainThread]: Using profiles.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\profiles.yml
+[0m16:58:20.126741 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml
+[0m16:58:20.127755 [info ] [MainThread]: adapter type: snowflake
+[0m16:58:20.128464 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:58:20.261554 [info ] [MainThread]: Configuration:
+[0m16:58:20.262372 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:58:20.262880 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:58:20.263420 [info ] [MainThread]: Required dependencies:
+[0m16:58:20.263985 [debug] [MainThread]: Executing "git --help"
+[0m16:58:20.336909 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:58:20.337392 [debug] [MainThread]: STDERR: "b''"
+[0m16:58:20.337795 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:58:20.338373 [info ] [MainThread]: Connection:
+[0m16:58:20.339341 [info ] [MainThread]:   account: SZVTTDQ.BS56030
+[0m16:58:20.340039 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m16:58:20.340664 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m16:58:20.341110 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m16:58:20.341511 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m16:58:20.341908 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m16:58:20.342307 [info ] [MainThread]:   authenticator: None
+[0m16:58:20.342806 [info ] [MainThread]:   oauth_client_id: None
+[0m16:58:20.343257 [info ] [MainThread]:   query_tag: None
+[0m16:58:20.343869 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:58:20.344494 [info ] [MainThread]:   host: None
+[0m16:58:20.345041 [info ] [MainThread]:   port: None
+[0m16:58:20.345668 [info ] [MainThread]:   proxy_host: None
+[0m16:58:20.346354 [info ] [MainThread]:   proxy_port: None
+[0m16:58:20.347110 [info ] [MainThread]:   protocol: None
+[0m16:58:20.347805 [info ] [MainThread]:   connect_retries: 1
+[0m16:58:20.348459 [info ] [MainThread]:   connect_timeout: None
+[0m16:58:20.349154 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:58:20.349741 [info ] [MainThread]:   retry_all: False
+[0m16:58:20.350289 [info ] [MainThread]:   insecure_mode: False
+[0m16:58:20.350836 [info ] [MainThread]:   reuse_connections: True
+[0m16:58:20.351337 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:58:20.352056 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m16:58:20.681561 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:58:20.744630 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:58:20.745027 [debug] [MainThread]: On debug: select 1 as id
+[0m16:58:20.745255 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:58:24.006486 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m16:58:24.006942 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m16:58:24.008407 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:58:24.009328 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:58:24.009980 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post SZVTTDQ.BS56030.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:58:24.011419 [debug] [MainThread]: Command `dbt debug` failed at 16:58:24.011201 after 4.48 seconds
+[0m16:58:24.011848 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:58:24.012178 [debug] [MainThread]: On debug: No close available on handle
+[0m16:58:24.012480 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE0601DBA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE064D84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000001DE05EAD7B0>]}
+[0m16:58:24.012881 [debug] [MainThread]: Flushing usage events
+[0m16:58:25.211257 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m16:59:55.447478 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000247293741A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x0000024726FF1E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002472A3C3ED0>]}
+
+
+============================== 16:59:55.452254 | 8942f506-7cff-413b-bd77-4faa01c6adde ==============================
+[0m16:59:55.452254 [info ] [MainThread]: Running with dbt=1.10.11
+[0m16:59:55.452985 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'log_path': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project\\logs', 'indirect_selection': 'eager', 'write_json': 'True', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])'}
+[0m16:59:55.475723 [info ] [MainThread]: dbt version: 1.10.11
+[0m16:59:55.476509 [info ] [MainThread]: python version: 3.13.7
+[0m16:59:55.477327 [info ] [MainThread]: python path: C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\.venv\Scripts\python.exe
+[0m16:59:55.477783 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m16:59:55.942318 [info ] [MainThread]: Using profiles dir at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project
+[0m16:59:55.943339 [info ] [MainThread]: Using profiles.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\profiles.yml
+[0m16:59:55.943993 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml
+[0m16:59:55.945126 [info ] [MainThread]: adapter type: snowflake
+[0m16:59:55.945858 [info ] [MainThread]: adapter version: 1.10.2
+[0m16:59:56.083859 [info ] [MainThread]: Configuration:
+[0m16:59:56.084777 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m16:59:56.085620 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m16:59:56.086239 [info ] [MainThread]: Required dependencies:
+[0m16:59:56.087699 [debug] [MainThread]: Executing "git --help"
+[0m16:59:56.161508 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m16:59:56.162081 [debug] [MainThread]: STDERR: "b''"
+[0m16:59:56.162662 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m16:59:56.163482 [info ] [MainThread]: Connection:
+[0m16:59:56.164274 [info ] [MainThread]:   account: BS56030.EB33189
+[0m16:59:56.164991 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m16:59:56.165588 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m16:59:56.166157 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m16:59:56.166716 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m16:59:56.167432 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m16:59:56.168208 [info ] [MainThread]:   authenticator: None
+[0m16:59:56.169259 [info ] [MainThread]:   oauth_client_id: None
+[0m16:59:56.170600 [info ] [MainThread]:   query_tag: None
+[0m16:59:56.171793 [info ] [MainThread]:   client_session_keep_alive: False
+[0m16:59:56.172556 [info ] [MainThread]:   host: None
+[0m16:59:56.173408 [info ] [MainThread]:   port: None
+[0m16:59:56.174188 [info ] [MainThread]:   proxy_host: None
+[0m16:59:56.175170 [info ] [MainThread]:   proxy_port: None
+[0m16:59:56.176162 [info ] [MainThread]:   protocol: None
+[0m16:59:56.176807 [info ] [MainThread]:   connect_retries: 1
+[0m16:59:56.177399 [info ] [MainThread]:   connect_timeout: None
+[0m16:59:56.178131 [info ] [MainThread]:   retry_on_database_errors: False
+[0m16:59:56.178895 [info ] [MainThread]:   retry_all: False
+[0m16:59:56.179650 [info ] [MainThread]:   insecure_mode: False
+[0m16:59:56.180231 [info ] [MainThread]:   reuse_connections: True
+[0m16:59:56.181044 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m16:59:56.182217 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m16:59:56.502137 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m16:59:56.566362 [debug] [MainThread]: Using snowflake connection "debug"
+[0m16:59:56.566769 [debug] [MainThread]: On debug: select 1 as id
+[0m16:59:56.567005 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:59:59.571967 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m16:59:59.572457 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m16:59:59.574260 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m16:59:59.575084 [info ] [MainThread]: [31m1 check failed:[0m
+[0m16:59:59.575742 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post BS56030.EB33189.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m16:59:59.577052 [debug] [MainThread]: Command `dbt debug` failed at 16:59:59.576818 after 4.26 seconds
+[0m16:59:59.577597 [debug] [MainThread]: Connection 'debug' was left open.
+[0m16:59:59.577890 [debug] [MainThread]: On debug: No close available on handle
+[0m16:59:59.578197 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002472C51DBA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002472C9D84D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002472C3AD7B0>]}
+[0m16:59:59.578553 [debug] [MainThread]: Flushing usage events
+[0m17:00:00.511913 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:04:08.303784 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238C7D501A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238C59E1E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238C8DA7ED0>]}
+
+
+============================== 17:04:08.308547 | ed64e582-77b9-4a0b-80a6-77619299a709 ==============================
+[0m17:04:08.308547 [info ] [MainThread]: Running with dbt=1.10.11
+[0m17:04:08.309691 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'warn_error': 'None', 'invocation_command': 'dbt debug', 'log_format': 'default', 'use_colors': 'True', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'quiet': 'False', 'printer_width': '80', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project\\logs', 'profiles_dir': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True'}
+[0m17:04:08.337928 [info ] [MainThread]: dbt version: 1.10.11
+[0m17:04:08.338987 [info ] [MainThread]: python version: 3.13.7
+[0m17:04:08.339775 [info ] [MainThread]: python path: C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\.venv\Scripts\python.exe
+[0m17:04:08.340561 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m17:04:08.949034 [info ] [MainThread]: Using profiles dir at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project
+[0m17:04:08.950087 [info ] [MainThread]: Using profiles.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\profiles.yml
+[0m17:04:08.950910 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml
+[0m17:04:08.952374 [info ] [MainThread]: adapter type: snowflake
+[0m17:04:08.953190 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:04:09.128450 [info ] [MainThread]: Configuration:
+[0m17:04:09.129620 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:04:09.130659 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:04:09.131904 [info ] [MainThread]: Required dependencies:
+[0m17:04:09.132864 [debug] [MainThread]: Executing "git --help"
+[0m17:04:09.289360 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:04:09.290511 [debug] [MainThread]: STDERR: "b''"
+[0m17:04:09.291173 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:04:09.292449 [info ] [MainThread]: Connection:
+[0m17:04:09.293236 [info ] [MainThread]:   account: BS56030.EB33189
+[0m17:04:09.294005 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m17:04:09.294715 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m17:04:09.295475 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m17:04:09.296457 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m17:04:09.297755 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m17:04:09.299045 [info ] [MainThread]:   authenticator: None
+[0m17:04:09.300015 [info ] [MainThread]:   oauth_client_id: None
+[0m17:04:09.300855 [info ] [MainThread]:   query_tag: None
+[0m17:04:09.301676 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:04:09.302443 [info ] [MainThread]:   host: None
+[0m17:04:09.303388 [info ] [MainThread]:   port: None
+[0m17:04:09.307837 [info ] [MainThread]:   proxy_host: None
+[0m17:04:09.310549 [info ] [MainThread]:   proxy_port: None
+[0m17:04:09.311785 [info ] [MainThread]:   protocol: None
+[0m17:04:09.313888 [info ] [MainThread]:   connect_retries: 1
+[0m17:04:09.314845 [info ] [MainThread]:   connect_timeout: None
+[0m17:04:09.315608 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:04:09.316310 [info ] [MainThread]:   retry_all: False
+[0m17:04:09.317014 [info ] [MainThread]:   insecure_mode: False
+[0m17:04:09.317709 [info ] [MainThread]:   reuse_connections: True
+[0m17:04:09.318393 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m17:04:09.319918 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m17:04:09.841122 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:04:09.911173 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:04:09.911631 [debug] [MainThread]: On debug: select 1 as id
+[0m17:04:09.911914 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:04:13.412265 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m17:04:13.413293 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m17:04:13.417429 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:04:13.418837 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:04:13.419897 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post BS56030.EB33189.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:04:13.422071 [debug] [MainThread]: Command `dbt debug` failed at 17:04:13.421528 after 5.27 seconds
+[0m17:04:13.423221 [debug] [MainThread]: Connection 'debug' was left open.
+[0m17:04:13.423949 [debug] [MainThread]: On debug: No close available on handle
+[0m17:04:13.424545 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238CAE81BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238CB3344D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000238CAD0D7B0>]}
+[0m17:04:13.425208 [debug] [MainThread]: Flushing usage events
+[0m17:04:14.941233 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:07:26.616133 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CCF9E741A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CCF7AF1E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CCFAEC7ED0>]}
+
+
+============================== 17:07:26.621041 | 4558dcd5-8439-41ec-b9c4-412e0ba1998b ==============================
+[0m17:07:26.621041 [info ] [MainThread]: Running with dbt=1.10.11
+[0m17:07:26.622068 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'log_cache_events': 'False', 'fail_fast': 'False', 'no_print': 'None', 'empty': 'None', 'use_experimental_parser': 'False', 'printer_width': '80', 'quiet': 'False', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project\\logs', 'profiles_dir': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project', 'static_parser': 'True', 'write_json': 'True'}
+[0m17:07:26.661599 [info ] [MainThread]: dbt version: 1.10.11
+[0m17:07:26.663127 [info ] [MainThread]: python version: 3.13.7
+[0m17:07:26.664585 [info ] [MainThread]: python path: C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\.venv\Scripts\python.exe
+[0m17:07:26.665641 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m17:07:27.228671 [info ] [MainThread]: Using profiles dir at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project
+[0m17:07:27.229541 [info ] [MainThread]: Using profiles.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\profiles.yml
+[0m17:07:27.230361 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml
+[0m17:07:27.231985 [info ] [MainThread]: adapter type: snowflake
+[0m17:07:27.232678 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:07:27.367997 [info ] [MainThread]: Configuration:
+[0m17:07:27.369014 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:07:27.369742 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:07:27.370444 [info ] [MainThread]: Required dependencies:
+[0m17:07:27.371094 [debug] [MainThread]: Executing "git --help"
+[0m17:07:27.473018 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:07:27.473663 [debug] [MainThread]: STDERR: "b''"
+[0m17:07:27.474241 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:07:27.474811 [info ] [MainThread]: Connection:
+[0m17:07:27.475417 [info ] [MainThread]:   account: BS56030.EB33189
+[0m17:07:27.475986 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m17:07:27.476543 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m17:07:27.477177 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m17:07:27.477835 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m17:07:27.478486 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m17:07:27.479127 [info ] [MainThread]:   authenticator: None
+[0m17:07:27.479873 [info ] [MainThread]:   oauth_client_id: None
+[0m17:07:27.480584 [info ] [MainThread]:   query_tag: None
+[0m17:07:27.481586 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:07:27.482618 [info ] [MainThread]:   host: None
+[0m17:07:27.483467 [info ] [MainThread]:   port: None
+[0m17:07:27.484547 [info ] [MainThread]:   proxy_host: None
+[0m17:07:27.485530 [info ] [MainThread]:   proxy_port: None
+[0m17:07:27.486440 [info ] [MainThread]:   protocol: None
+[0m17:07:27.487862 [info ] [MainThread]:   connect_retries: 1
+[0m17:07:27.488589 [info ] [MainThread]:   connect_timeout: None
+[0m17:07:27.489225 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:07:27.489823 [info ] [MainThread]:   retry_all: False
+[0m17:07:27.490321 [info ] [MainThread]:   insecure_mode: False
+[0m17:07:27.490848 [info ] [MainThread]:   reuse_connections: True
+[0m17:07:27.491318 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m17:07:27.492072 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m17:07:27.894644 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:07:27.970650 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:07:27.971104 [debug] [MainThread]: On debug: select 1 as id
+[0m17:07:27.971407 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:07:31.354969 [debug] [MainThread]: Snowflake adapter: Error running SQL: select 1 as id
+[0m17:07:31.355569 [debug] [MainThread]: Snowflake adapter: Rolling back transaction.
+[0m17:07:31.359470 [info ] [MainThread]:   Connection test: [[31mERROR[0m]
+
+[0m17:07:31.361018 [info ] [MainThread]: [31m1 check failed:[0m
+[0m17:07:31.361834 [info ] [MainThread]: dbt was unable to connect to the specified database.
+The database returned the following error:
+
+  >Database Error
+  290404 (08001): 404 Not Found: post BS56030.EB33189.snowflakecomputing.com:443/session/v1/login-request
+
+Check your database credentials and try again. For more information, visit:
+https://docs.getdbt.com/docs/configure-your-profile
+
+
+[0m17:07:31.364064 [debug] [MainThread]: Command `dbt debug` failed at 17:07:31.363806 after 4.90 seconds
+[0m17:07:31.364528 [debug] [MainThread]: Connection 'debug' was left open.
+[0m17:07:31.364858 [debug] [MainThread]: On debug: No close available on handle
+[0m17:07:31.365218 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CCFCFE1BA0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CCFD4944D0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x000002CCFCE717B0>]}
+[0m17:07:31.365865 [debug] [MainThread]: Flushing usage events
+[0m17:07:32.889764 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m17:08:02.633231 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195EAAB01A0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195E8731E50>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195EBB07ED0>]}
+
+
+============================== 17:08:02.638496 | 89e7f664-4285-4a67-ac91-d0fb445305c3 ==============================
+[0m17:08:02.638496 [info ] [MainThread]: Running with dbt=1.10.11
+[0m17:08:02.639848 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'profiles_dir': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project', 'send_anonymous_usage_stats': 'True', 'use_colors': 'True', 'cache_selected_only': 'False', 'target_path': 'None', 'version_check': 'True', 'invocation_command': 'dbt debug', 'log_format': 'default', 'warn_error': 'None', 'introspect': 'True', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'no_print': 'None', 'quiet': 'False', 'use_experimental_parser': 'False', 'log_cache_events': 'False', 'empty': 'None', 'indirect_selection': 'eager', 'log_path': 'C:\\Users\\indeb\\Downloads\\avito-dbt-project\\avito-dbt-project\\logs', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True'}
+[0m17:08:02.668760 [info ] [MainThread]: dbt version: 1.10.11
+[0m17:08:02.669543 [info ] [MainThread]: python version: 3.13.7
+[0m17:08:02.670119 [info ] [MainThread]: python path: C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\.venv\Scripts\python.exe
+[0m17:08:02.670823 [info ] [MainThread]: os info: Windows-11-10.0.26100-SP0
+[0m17:08:03.190185 [info ] [MainThread]: Using profiles dir at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project
+[0m17:08:03.191190 [info ] [MainThread]: Using profiles.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\profiles.yml
+[0m17:08:03.192265 [info ] [MainThread]: Using dbt_project.yml file at C:\Users\indeb\Downloads\avito-dbt-project\avito-dbt-project\dbt_project.yml
+[0m17:08:03.193784 [info ] [MainThread]: adapter type: snowflake
+[0m17:08:03.194428 [info ] [MainThread]: adapter version: 1.10.2
+[0m17:08:03.327628 [info ] [MainThread]: Configuration:
+[0m17:08:03.328439 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m17:08:03.329108 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m17:08:03.330016 [info ] [MainThread]: Required dependencies:
+[0m17:08:03.331044 [debug] [MainThread]: Executing "git --help"
+[0m17:08:03.418260 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--no-lazy-fetch]\n           [--no-optional-locks] [--no-advice] [--bare] [--git-dir=<path>]\n           [--work-tree=<path>] [--namespace=<name>] [--config-env=<name>=<envvar>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone      Clone a repository into a new directory\n   init       Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add        Add file contents to the index\n   mv         Move or rename a file, a directory, or a symlink\n   restore    Restore working tree files\n   rm         Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect     Use binary search to find the commit that introduced a bug\n   diff       Show changes between commits, commit and working tree, etc\n   grep       Print lines matching a pattern\n   log        Show commit logs\n   show       Show various types of objects\n   status     Show the working tree status\n\ngrow, mark and tweak your common history\n   backfill   Download missing objects in a partial clone\n   branch     List, create, or delete branches\n   commit     Record changes to the repository\n   merge      Join two or more development histories together\n   rebase     Reapply commits on top of another base tip\n   reset      Reset current HEAD to the specified state\n   switch     Switch branches\n   tag        Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch      Download objects and refs from another repository\n   pull       Fetch from and integrate with another repository or a local branch\n   push       Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m17:08:03.419161 [debug] [MainThread]: STDERR: "b''"
+[0m17:08:03.419849 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m17:08:03.420583 [info ] [MainThread]: Connection:
+[0m17:08:03.421210 [info ] [MainThread]:   account: szvttdq-bs56030
+[0m17:08:03.421754 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m17:08:03.422271 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m17:08:03.422751 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m17:08:03.423225 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m17:08:03.423687 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m17:08:03.424148 [info ] [MainThread]:   authenticator: None
+[0m17:08:03.424602 [info ] [MainThread]:   oauth_client_id: None
+[0m17:08:03.425077 [info ] [MainThread]:   query_tag: None
+[0m17:08:03.425804 [info ] [MainThread]:   client_session_keep_alive: False
+[0m17:08:03.426505 [info ] [MainThread]:   host: None
+[0m17:08:03.427118 [info ] [MainThread]:   port: None
+[0m17:08:03.427622 [info ] [MainThread]:   proxy_host: None
+[0m17:08:03.428223 [info ] [MainThread]:   proxy_port: None
+[0m17:08:03.428759 [info ] [MainThread]:   protocol: None
+[0m17:08:03.429207 [info ] [MainThread]:   connect_retries: 1
+[0m17:08:03.429772 [info ] [MainThread]:   connect_timeout: None
+[0m17:08:03.430613 [info ] [MainThread]:   retry_on_database_errors: False
+[0m17:08:03.431550 [info ] [MainThread]:   retry_all: False
+[0m17:08:03.432314 [info ] [MainThread]:   insecure_mode: False
+[0m17:08:03.433152 [info ] [MainThread]:   reuse_connections: True
+[0m17:08:03.434237 [info ] [MainThread]:   s3_stage_vpce_dns_name: None
+[0m17:08:03.435381 [info ] [MainThread]: Registered adapter: snowflake=1.10.2
+[0m17:08:03.889285 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m17:08:03.964067 [debug] [MainThread]: Using snowflake connection "debug"
+[0m17:08:03.964628 [debug] [MainThread]: On debug: select 1 as id
+[0m17:08:03.964948 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:08:07.403366 [debug] [MainThread]: SQL status: SUCCESS 1 in 3.438 seconds
+[0m17:08:07.404870 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m17:08:07.405774 [info ] [MainThread]: [32mAll checks passed![0m
+[0m17:08:07.407320 [debug] [MainThread]: Command `dbt debug` succeeded at 17:08:07.407062 after 4.95 seconds
+[0m17:08:07.407816 [debug] [MainThread]: Connection 'debug' was left open.
+[0m17:08:07.408175 [debug] [MainThread]: On debug: Close
+[0m17:08:07.603830 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195EDBE3950>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195EE094CB0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x00000195EDA6FAC0>]}
+[0m17:08:07.604746 [debug] [MainThread]: Flushing usage events
+[0m17:08:08.742747 [debug] [MainThread]: An error was encountered while trying to flush usage events

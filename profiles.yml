@@ -3,12 +3,12 @@ avito_snowflake:
   outputs:
     dev:
       type: snowflake
-      account: "votre-compte.region"
-      user: "votre-utilisateur"
-      password: "votre-mot-de-passe"
-      role: "TRANSFORMER"
-      database: "AVITO_DEV"
-      warehouse: "TRANSFORMING_WH"
-      schema: "analytics"
+      account: szvttdq-bs56030
+      user: AIRBYTE_USER
+      password: 2025@2025
+      role: AIRBYTE_ROLE
+      database: AIRBYTE_DATABASE
+      warehouse: AIRBYTE_WAREHOUSE
+      schema: AIRBYTE_SCHEMA
       threads: 4
       client_session_keep_alive: false
