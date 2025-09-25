@@ -16,13 +16,41 @@ clean-targets:
   - "target"
   - "dbt_packages"
 
+require-dbt-version: ">=1.5.0"
+
 models:
   avito_data_pipeline:
+    # Configuration pour les modèles de staging
     staging:
       avito:
         +materialized: view
-        +schema: staging
+        +schema: "staging"
+        +tags: ["staging", "avito"]
+    
+    # Configuration pour les modèles intermédiaires
+    intermediate:
+      +materialized: table
+      +schema: "intermediate"
+      +tags: ["intermediate"]
+    
+    # Configuration pour les modèles business (marts)
     marts:
       core:
         +materialized: table
-        +schema: analytics
+        +schema: "analytics"
+        +tags: ["marts", "core", "reporting"]
+
+# Variables globales pour le projet
+vars:
+  project_name: "avito_cars_analysis"
+  default_schema: "analytics"
+  
+  # Variables pour les seuils de qualité des données
+  data_quality:
+    min_car_year: 1990
+    max_car_year: 2024
+    max_mileage_km: 500000
+    max_price_dh: 2000000
+
+# Configuration des macros
+query-comment: "dbt_avito_pipeline: {{ project_name }} v{{ version }}"

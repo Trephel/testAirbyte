@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: AIRBYTE_DATABASE
+    schema: RAW_DATA  # Schéma corrigé
+    tables:
+      - name: _airbyte_raw_avito_car_dataset
+        description: "Raw Avito car dataset from Airbyte"

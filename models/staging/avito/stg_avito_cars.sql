@@ -1,95 +1,55 @@
 {{
     config(
         materialized='view',
-        schema='staging'
+        schema='staging',
+        tags=['staging', 'avito']
     )
 }}
 
--- dbt:autocompletion:enable
-WITH source_data AS (
+WITH raw_data AS (
     SELECT 
-        "Unnamed: 0" as source_id,
-        "Lien" as advertisement_url,
-        "Ville" as city,
-        "Secteur" as sector,
-        "Marque" as brand,
-        "Modèle" as model,
-        "Année-Modèle" as model_year_raw,
-        "Kilométrage" as mileage_raw,
-        "Type de carburant" as fuel_type,
-        "Puissance fiscale" as fiscal_power,
-        "Boite de vitesses" as transmission,
-        "Nombre de portes" as doors_count,
-        "Origine" as origin,
-        "Première main" as first_hand_raw,
-        "État" as condition,
-        "Prix" as price_raw
-    FROM {{ source('airbyte_raw', 'avito_car_dataset') }}
+        _airbyte_ab_id,
+        _airbyte_emitted_at,
+        _airbyte_data
+    FROM AIRBYTE_DATABASE.AIRBYTE_SCHEMA."_AIRBYTE_RAW_AVITOCARDATASET"
 ),
 
-cleaned_data AS (
-    SELECT
-        source_id,
-        advertisement_url,
-        INITCAP(TRIM(city)) as city,
-        INITCAP(TRIM(sector)) as sector,
-        INITCAP(TRIM(brand)) as brand,
-        INITCAP(TRIM(model)) as model,
+extracted_data AS (
+    SELECT 
+        _airbyte_ab_id as airbyte_id,
+        _airbyte_emitted_at as loaded_at,
         
-        -- Nettoyage année
-        CASE 
-            WHEN model_year_raw ~ '^\\d{4}$' 
-            THEN CAST(model_year_raw AS INTEGER)
-            ELSE NULL 
-        END as model_year,
+        -- Identifiants et URLs
+        _airbyte_data:Unnamed_0::string as source_id,
+        _airbyte_data:Lien::string as advertisement_url,
         
-        -- Nettoyage kilométrage
-        CASE 
-            WHEN mileage_raw ~ '\\d+\\s*-\\s*\\d+' THEN
-                (
-                    CAST(SPLIT_PART(SPLIT_PART(mileage_raw, '-', 1), ' ', 1) AS INTEGER) +
-                    CAST(REGEXP_REPLACE(SPLIT_PART(mileage_raw, '-', 2), '[^0-9]', '', 'g') AS INTEGER)
-                ) / 2
-            WHEN mileage_raw ~ '^\\d+$' THEN CAST(mileage_raw AS INTEGER)
-            ELSE NULL 
-        END as mileage_km,
+        -- Localisation
+        _airbyte_data:Ville::string as city,
+        _airbyte_data:Secteur::string as sector,
         
-        INITCAP(TRIM(fuel_type)) as fuel_type,
+        -- Informations véhicule
+        _airbyte_data:Marque::string as brand,
+        _airbyte_data:Modele::string as model,
+        _airbyte_data:"Année-Modèle"::string as model_year_raw,
+        _airbyte_data:"Kilométrage"::string as mileage_raw,
         
-        CASE 
-            WHEN fiscal_power ~ '^\\d+$' THEN CAST(fiscal_power AS INTEGER)
-            ELSE NULL 
-        END as fiscal_power,
+        -- Caractéristiques techniques
+        _airbyte_data:"Type de carburant"::string as fuel_type,
+        _airbyte_data:"Puissance fiscale"::string as fiscal_power,
+        _airbyte_data:"Boite de vitesses"::string as transmission,
+        _airbyte_data:"Nombre de portes"::string as doors_count,
         
-        INITCAP(TRIM(transmission)) as transmission,
+        -- Prix
+        _airbyte_data:Prix::number as price_dh,
         
-        CASE 
-            WHEN doors_count ~ '^\\d+$' THEN CAST(doors_count AS INTEGER)
-            ELSE NULL 
-        END as doors_count,
+        -- État et historique
+        _airbyte_data:"Première main"::string as first_hand_raw,
+        _airbyte_data:Etat::string as condition
         
-        INITCAP(TRIM(origin)) as origin,
-        
-        CASE 
-            WHEN first_hand_raw = 'Oui' THEN TRUE
-            WHEN first_hand_raw = 'Non' THEN FALSE
-            ELSE NULL 
-        END as first_hand,
-        
-        INITCAP(TRIM(condition)) as condition,
-        
-        CASE 
-            WHEN price_raw ~ '^\\d+$' THEN CAST(price_raw AS INTEGER)
-            ELSE NULL 
-        END as price_dh,
-        
-        CURRENT_TIMESTAMP as loaded_at
-        
-    FROM source_data
+    FROM raw_data
 )
 
 SELECT *
-FROM cleaned_data
-WHERE brand IS NOT NULL
-  AND model_year BETWEEN 1990 AND EXTRACT(YEAR FROM CURRENT_DATE)
-  AND price_dh BETWEEN 1000 AND 2000000
+FROM extracted_data
+WHERE price_dh IS NOT NULL
+  AND brand IS NOT NULL

@@ -4,20 +4,12 @@ dbt_packages/
 logs/
 dbt.log
 
+# Environnement
+.env
+profiles.yml.local
+*.bak
+
 # OS
 .DS_Store
 Thumbs.db
-
-# IDE
-.vscode/
-.idea/
-*.swp
-*.swo
-
-# Environnement
-.env
-profiles.yml
-
-# Docker
-.dockerignore
 dbt_internal_packages/
