@@ -5,18 +5,12 @@ config-version: 2
 profile: 'avito_snowflake'
 
 model-paths: ["models"]
-analysis-paths: ["analyses"]
+analysis-paths: ["analyses"] 
 test-paths: ["tests"]
 seed-paths: ["seeds"]
 macro-paths: ["macros"]
-snapshot-paths: ["snapshots"]
 
-target-path: "target"
-clean-targets:
-  - "target"
-  - "dbt_packages"
-
-require-dbt-version: ">=1.5.0"
+require-dbt-version: ">=1.9.0,<2.0.0"  
 
 models:
   avito_data_pipeline:

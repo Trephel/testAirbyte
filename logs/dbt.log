@@ -1,119 +1,73 @@
 dbt-fusion 2.0.0-preview.25
    Loading profiles.yml
    Loading packages.yml
- Succeeded [  1.54s] model AIRBYTE_SCHEMA_staging.test_raw_structure (view)
- Succeeded [  0.87s] model AIRBYTE_SCHEMA_staging.stg_avito_cars (view)
-    Passed [  0.83s] test  AIRBYTE_SCHEMA_dbt_test__audit.unique_stg_avito_cars_source_id
-    Passed [  1.13s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_price_dh
-    Passed [  1.44s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_brand
-    Passed [  1.66s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_source_id
- Succeeded [  1.82s] model AIRBYTE_SCHEMA_analytics.fct_car_market_analysis (table)
- Succeeded [  2.02s] model AIRBYTE_SCHEMA_intermediate.int_car_features (table)
- Succeeded [  1.54s] model AIRBYTE_SCHEMA_analytics.dim_geographic_analysis (table)
-  Finished 'build' target 'dev' in 10s 395ms
-[0m11:38:35.592532 [debug] [MainThread]: Got an exception trying to initialize tracking
+ Succeeded [  5.84s] model AIRBYTE_SCHEMA_staging.test_raw_structure (view)
+ Succeeded [  4.51s] model AIRBYTE_SCHEMA_staging.stg_avito_cars (view)
+    Passed [  8.42s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_source_id
+    Passed [ 10.90s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_brand
+    Passed [ 11.85s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_price_dh
+    Passed [ 12.50s] test  AIRBYTE_SCHEMA_dbt_test__audit.unique_stg_avito_cars_source_id
+ Succeeded [  1.90s] model AIRBYTE_SCHEMA_intermediate.int_car_features (table)
+ Succeeded [  3.96s] model AIRBYTE_SCHEMA_analytics.fct_car_market_analysis (table)
+ Succeeded [  2.46s] model AIRBYTE_SCHEMA_analytics.dim_geographic_analysis (table)
+  Finished 'build' target 'dev' in 31s 171ms
+[0m15:55:20.345370 [debug] [MainThread]: Got an exception trying to initialize tracking
 
 
-============================== 11:38:35.671311 | 33ffc97c-a408-4a00-a69b-6f136dd4b772 ==============================
-[0m11:38:35.671311 [info ] [MainThread]: Running with dbt=1.5.0
-[0m11:38:35.676190 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'version_check': 'True', 'profiles_dir': '/usr/app', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'send_anonymous_usage_stats': 'True'}
-[0m11:38:37.244763 [debug] [MainThread]: checksum: 4568eb639a77b8fcb3a1f4a07856f42b1ff63f1376652889143968e1dbdafbda, vars: {}, profile: , target: , version: 1.5.0
-[0m11:38:37.343615 [info ] [MainThread]: Unable to do partial parsing because a project config has changed
-[0m11:38:41.900831 [debug] [MainThread]: 1699: static parser successfully parsed intermediate/int_car_features.sql
-[0m11:38:41.928257 [debug] [MainThread]: 1699: static parser successfully parsed marts/core/dim_geographic_analysis.sql
-[0m11:38:41.937627 [debug] [MainThread]: 1699: static parser successfully parsed marts/core/fct_car_market_analysis.sql
-[0m11:38:41.947420 [debug] [MainThread]: 1699: static parser successfully parsed staging/avito/stg_avito_cars.sql
-[0m11:38:41.955383 [debug] [MainThread]: 1699: static parser successfully parsed staging/avito/test_raw_structure.sql
-[0m11:38:42.182122 [info ] [MainThread]: Found 5 models, 4 tests, 0 snapshots, 0 analyses, 438 macros, 0 operations, 0 seed files, 1 source, 0 exposures, 0 metrics, 0 groups
-[0m11:38:42.187049 [info ] [MainThread]: 
-[0m11:38:42.190987 [debug] [MainThread]: Acquiring new snowflake connection 'master'
-[0m11:38:42.196511 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBYTE_DATABASE'
-[0m11:38:42.235579 [debug] [ThreadPool]: Using snowflake connection "list_AIRBYTE_DATABASE"
-[0m11:38:42.246901 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE: /* dbt_avito_pipeline: avito_data_pipeline v */
-show terse schemas in database AIRBYTE_DATABASE
-    limit 10000
-[0m11:38:42.249182 [debug] [ThreadPool]: Opening a new connection, currently in state init
-[0m11:38:45.704847 [debug] [ThreadPool]: SQL status: SUCCESS 7 in 3.0 seconds
-[0m11:38:45.710019 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE: Close
-[0m11:38:46.012783 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_analytics'
-[0m11:38:46.015175 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_AIRBYTE_DATABASE, now list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_intermediate)
-[0m11:38:46.018225 [debug] [ThreadPool]: Acquiring new snowflake connection 'list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_staging'
-[0m11:38:46.031138 [debug] [ThreadPool]: Using snowflake connection "list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_analytics"
-[0m11:38:46.037682 [debug] [ThreadPool]: Using snowflake connection "list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_intermediate"
-[0m11:38:46.045732 [debug] [ThreadPool]: Using snowflake connection "list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_staging"
-[0m11:38:46.048034 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_analytics: /* dbt_avito_pipeline: avito_data_pipeline v */
-show terse objects in AIRBYTE_DATABASE.AIRBYTE_SCHEMA_analytics
-[0m11:38:46.050558 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_intermediate: /* dbt_avito_pipeline: avito_data_pipeline v */
-show terse objects in AIRBYTE_DATABASE.AIRBYTE_SCHEMA_intermediate
-[0m11:38:46.053159 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_staging: /* dbt_avito_pipeline: avito_data_pipeline v */
-show terse objects in AIRBYTE_DATABASE.AIRBYTE_SCHEMA_staging
-[0m11:38:46.056107 [debug] [ThreadPool]: Opening a new connection, currently in state init
-[0m11:38:46.059040 [debug] [ThreadPool]: Opening a new connection, currently in state closed
-[0m11:38:46.061601 [debug] [ThreadPool]: Opening a new connection, currently in state init
-[0m11:38:46.670311 [debug] [ThreadPool]: SQL status: SUCCESS 1 in 1.0 seconds
-[0m11:38:46.677535 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_intermediate: Close
-[0m11:38:46.697081 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
-[0m11:38:46.702484 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_staging: Close
-[0m11:38:46.843182 [debug] [ThreadPool]: SQL status: SUCCESS 2 in 1.0 seconds
-[0m11:38:46.852234 [debug] [ThreadPool]: On list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_analytics: Close
-[0m11:38:47.046896 [info ] [MainThread]: Concurrency: 4 threads (target='dev')
-[0m11:38:47.050438 [info ] [MainThread]: 
-[0m11:38:47.171346 [debug] [Thread-1 (]: Began running node model.avito_data_pipeline.int_car_features
-[0m11:38:47.184385 [info ] [Thread-1 (]: 1 of 1 START sql table model AIRBYTE_SCHEMA_intermediate.int_car_features ...... [RUN]
-[0m11:38:47.188591 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_analytics, now model.avito_data_pipeline.int_car_features)
-[0m11:38:47.192208 [debug] [Thread-1 (]: Began compiling node model.avito_data_pipeline.int_car_features
-[0m11:38:47.219613 [debug] [Thread-1 (]: Writing injected SQL for node "model.avito_data_pipeline.int_car_features"
-[0m11:38:47.260440 [debug] [Thread-1 (]: Timing info for model.avito_data_pipeline.int_car_features (compile): 11:38:47.199104 => 11:38:47.259861
-[0m11:38:47.263510 [debug] [Thread-1 (]: Began executing node model.avito_data_pipeline.int_car_features
-[0m11:38:47.355348 [debug] [Thread-1 (]: Writing runtime sql for node "model.avito_data_pipeline.int_car_features"
-[0m11:38:47.429628 [debug] [Thread-1 (]: Using snowflake connection "model.avito_data_pipeline.int_car_features"
-[0m11:38:47.435987 [debug] [Thread-1 (]: On model.avito_data_pipeline.int_car_features: /* dbt_avito_pipeline: avito_data_pipeline v */
-create or replace transient table AIRBYTE_DATABASE.AIRBYTE_SCHEMA_intermediate.int_car_features
-         as
-        (
+============================== 15:55:20.372144 | c070de46-8457-4f67-b1b0-395f50c888e4 ==============================
+[0m15:55:20.372144 [info ] [MainThread]: Running with dbt=1.9.0
+[0m15:55:20.375432 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/usr/app/logs', 'fail_fast': 'False', 'profiles_dir': '/usr/app', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt debug --project-dir /usr/app --profiles-dir /usr/app', 'send_anonymous_usage_stats': 'True'}
+[0m15:55:20.406654 [info ] [MainThread]: dbt version: 1.9.0
+[0m15:55:20.409809 [info ] [MainThread]: python version: 3.11.2
+[0m15:55:20.413110 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m15:55:20.416910 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m15:55:21.799449 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m15:55:21.801772 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m15:55:21.804258 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m15:55:21.808222 [info ] [MainThread]: adapter type: snowflake
+[0m15:55:21.810046 [info ] [MainThread]: adapter version: 1.9.0
+[0m15:55:21.985346 [info ] [MainThread]: Configuration:
+[0m15:55:21.987542 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m15:55:21.989581 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m15:55:21.991523 [info ] [MainThread]: Required dependencies:
+[0m15:55:21.993504 [debug] [MainThread]: Executing "git --help"
+[0m15:55:22.008391 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m15:55:22.010663 [debug] [MainThread]: STDERR: "b''"
+[0m15:55:22.012433 [info ] [MainThread]:  - git [[32mOK found[0m]
 
-SELECT
-    source_id,
-    city,
-    sector,
-    brand,
-    model,
-    model_year_raw as model_year,
-    
-    -- Kilométrage temporairement désactivé
-    NULL as mileage_km,
-    
-    fuel_type,
-    transmission,
-    price_dh,
-    
-    -- Calcul de l'âge du véhicule
-    CASE 
-        WHEN model_year_raw IS NOT NULL 
-        THEN EXTRACT(YEAR FROM CURRENT_DATE()) - model_year_raw 
-        ELSE NULL 
-    END as car_age_years
-    
-FROM AIRBYTE_DATABASE.AIRBYTE_SCHEMA_staging.stg_avito_cars
-WHERE price_dh IS NOT NULL
-  AND brand IS NOT NULL
-        );
-[0m11:38:47.441355 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
-[0m11:38:50.663305 [debug] [Thread-1 (]: SQL status: SUCCESS 1 in 3.0 seconds
-[0m11:38:50.699803 [debug] [Thread-1 (]: Timing info for model.avito_data_pipeline.int_car_features (execute): 11:38:47.266430 => 11:38:50.699466
-[0m11:38:50.702168 [debug] [Thread-1 (]: On model.avito_data_pipeline.int_car_features: Close
-[0m11:38:50.926091 [info ] [Thread-1 (]: 1 of 1 OK created sql table model AIRBYTE_SCHEMA_intermediate.int_car_features . [[32mSUCCESS 1[0m in 3.74s]
-[0m11:38:50.929864 [debug] [Thread-1 (]: Finished running node model.avito_data_pipeline.int_car_features
-[0m11:38:50.937551 [debug] [MainThread]: Connection 'master' was properly closed.
-[0m11:38:50.939988 [debug] [MainThread]: Connection 'list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_intermediate' was properly closed.
-[0m11:38:50.942291 [debug] [MainThread]: Connection 'model.avito_data_pipeline.int_car_features' was properly closed.
-[0m11:38:50.944624 [debug] [MainThread]: Connection 'list_AIRBYTE_DATABASE_AIRBYTE_SCHEMA_staging' was properly closed.
-[0m11:38:50.946856 [info ] [MainThread]: 
-[0m11:38:50.950259 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 8.76 seconds (8.76s).
-[0m11:38:50.954487 [debug] [MainThread]: Command end result
-[0m11:38:50.995813 [info ] [MainThread]: 
-[0m11:38:50.998868 [info ] [MainThread]: [32mCompleted successfully[0m
-[0m11:38:51.002094 [info ] [MainThread]: 
-[0m11:38:51.007570 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 TOTAL=1
-[0m11:38:51.011559 [debug] [MainThread]: Command `dbt run` succeeded at 11:38:51.011308 after 15.52 seconds
-[0m11:38:51.013729 [debug] [MainThread]: Flushing usage events
+[0m15:55:22.014655 [info ] [MainThread]: Connection:
+[0m15:55:22.016718 [info ] [MainThread]:   account: szvttdq-bs56030
+[0m15:55:22.025087 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m15:55:22.029404 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m15:55:22.032153 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m15:55:22.035509 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m15:55:22.037966 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m15:55:22.041001 [info ] [MainThread]:   authenticator: None
+[0m15:55:22.043441 [info ] [MainThread]:   oauth_client_id: None
+[0m15:55:22.045788 [info ] [MainThread]:   query_tag: None
+[0m15:55:22.047803 [info ] [MainThread]:   client_session_keep_alive: False
+[0m15:55:22.050034 [info ] [MainThread]:   host: None
+[0m15:55:22.052447 [info ] [MainThread]:   port: None
+[0m15:55:22.055601 [info ] [MainThread]:   proxy_host: None
+[0m15:55:22.058724 [info ] [MainThread]:   proxy_port: None
+[0m15:55:22.061296 [info ] [MainThread]:   protocol: None
+[0m15:55:22.063685 [info ] [MainThread]:   connect_retries: 1
+[0m15:55:22.065762 [info ] [MainThread]:   connect_timeout: None
+[0m15:55:22.068304 [info ] [MainThread]:   retry_on_database_errors: False
+[0m15:55:22.071614 [info ] [MainThread]:   retry_all: False
+[0m15:55:22.074689 [info ] [MainThread]:   insecure_mode: False
+[0m15:55:22.077369 [info ] [MainThread]:   reuse_connections: True
+[0m15:55:22.079966 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m15:55:22.213049 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m15:55:22.385566 [debug] [MainThread]: Using snowflake connection "debug"
+[0m15:55:22.387139 [debug] [MainThread]: On debug: select 1 as id
+[0m15:55:22.388138 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:55:27.660594 [debug] [MainThread]: SQL status: SUCCESS 1 in 5.272 seconds
+[0m15:55:27.663447 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m15:55:27.665632 [info ] [MainThread]: [32mAll checks passed![0m
+[0m15:55:27.671706 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 7.449689, "process_in_blocks": "37504", "process_kernel_time": 2.569076, "process_mem_max_rss": "119336", "process_out_blocks": "3728", "process_user_time": 3.671253}
+[0m15:55:27.674046 [debug] [MainThread]: Command `dbt debug` succeeded at 15:55:27.673796 after 7.45 seconds
+[0m15:55:27.677273 [debug] [MainThread]: Connection 'debug' was left open.
+[0m15:55:27.681733 [debug] [MainThread]: On debug: Close
+[0m15:55:27.947653 [debug] [MainThread]: Flushing usage events
