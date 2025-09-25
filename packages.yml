@@ -1,2 +1,4 @@
-# packages.yml
-packages: []
+
+packages:
+  - package: dbt-labs/dbt_utils
+    version: 0.9.0  # Version stable pour dbt 1.9.0
