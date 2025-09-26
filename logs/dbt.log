@@ -1,73 +1,13 @@
 dbt-fusion 2.0.0-preview.25
    Loading profiles.yml
-  Fetching packages.yml
- Succeeded [  9.22s] model AIRBYTE_SCHEMA_staging.test_raw_structure (view)
- Succeeded [  0.83s] model AIRBYTE_SCHEMA_staging.stg_avito_cars (view)
-    Passed [  1.12s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_price_dh
-    Passed [  1.17s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_brand
-    Passed [  1.95s] test  AIRBYTE_SCHEMA_dbt_test__audit.unique_stg_avito_cars_source_id
-    Passed [  1.97s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_source_id
- Succeeded [  1.92s] model AIRBYTE_SCHEMA_analytics.fct_car_market_analysis (table)
- Succeeded [  1.92s] model AIRBYTE_SCHEMA_intermediate.int_car_features (table)
- Succeeded [  2.05s] model AIRBYTE_SCHEMA_analytics.dim_geographic_analysis (table)
-  Finished 'build' target 'dev' in 20s 564ms
-[0m16:16:41.714948 [debug] [MainThread]: Got an exception trying to initialize tracking
-
-
-============================== 16:16:41.744441 | c2a829aa-e420-44fd-9f05-5fb31f40b9ea ==============================
-[0m16:16:41.744441 [info ] [MainThread]: Running with dbt=1.9.0
-[0m16:16:41.746865 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/usr/app', 'version_check': 'True', 'warn_error': 'None', 'log_path': '/usr/app/logs', 'debug': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'invocation_command': 'dbt debug --project-dir /usr/app --profiles-dir /usr/app', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
-[0m16:16:41.777259 [info ] [MainThread]: dbt version: 1.9.0
-[0m16:16:41.779654 [info ] [MainThread]: python version: 3.11.2
-[0m16:16:41.782279 [info ] [MainThread]: python path: /usr/local/bin/python
-[0m16:16:41.786150 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31
-[0m16:16:42.713734 [info ] [MainThread]: Using profiles dir at /usr/app
-[0m16:16:42.717299 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
-[0m16:16:42.720865 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
-[0m16:16:42.725759 [info ] [MainThread]: adapter type: snowflake
-[0m16:16:42.729529 [info ] [MainThread]: adapter version: 1.9.0
-[0m16:16:43.036919 [info ] [MainThread]: Configuration:
-[0m16:16:43.039454 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
-[0m16:16:43.042929 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
-[0m16:16:43.045399 [info ] [MainThread]: Required dependencies:
-[0m16:16:43.048474 [debug] [MainThread]: Executing "git --help"
-[0m16:16:43.067328 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
-[0m16:16:43.070498 [debug] [MainThread]: STDERR: "b''"
-[0m16:16:43.073244 [info ] [MainThread]:  - git [[32mOK found[0m]
-
-[0m16:16:43.075657 [info ] [MainThread]: Connection:
-[0m16:16:43.078278 [info ] [MainThread]:   account: szvttdq-bs56030
-[0m16:16:43.080557 [info ] [MainThread]:   user: AIRBYTE_USER
-[0m16:16:43.083419 [info ] [MainThread]:   database: AIRBYTE_DATABASE
-[0m16:16:43.086373 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
-[0m16:16:43.089427 [info ] [MainThread]:   role: AIRBYTE_ROLE
-[0m16:16:43.092529 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
-[0m16:16:43.095135 [info ] [MainThread]:   authenticator: None
-[0m16:16:43.097793 [info ] [MainThread]:   oauth_client_id: None
-[0m16:16:43.100564 [info ] [MainThread]:   query_tag: None
-[0m16:16:43.104044 [info ] [MainThread]:   client_session_keep_alive: False
-[0m16:16:43.107565 [info ] [MainThread]:   host: None
-[0m16:16:43.111019 [info ] [MainThread]:   port: None
-[0m16:16:43.113814 [info ] [MainThread]:   proxy_host: None
-[0m16:16:43.116583 [info ] [MainThread]:   proxy_port: None
-[0m16:16:43.123271 [info ] [MainThread]:   protocol: None
-[0m16:16:43.126881 [info ] [MainThread]:   connect_retries: 1
-[0m16:16:43.130854 [info ] [MainThread]:   connect_timeout: None
-[0m16:16:43.140480 [info ] [MainThread]:   retry_on_database_errors: False
-[0m16:16:43.145351 [info ] [MainThread]:   retry_all: False
-[0m16:16:43.148513 [info ] [MainThread]:   insecure_mode: False
-[0m16:16:43.153031 [info ] [MainThread]:   reuse_connections: True
-[0m16:16:43.156640 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
-[0m16:16:43.336407 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
-[0m16:16:43.554201 [debug] [MainThread]: Using snowflake connection "debug"
-[0m16:16:43.556330 [debug] [MainThread]: On debug: select 1 as id
-[0m16:16:43.558344 [debug] [MainThread]: Opening a new connection, currently in state init
-[0m16:16:48.092527 [debug] [MainThread]: SQL status: SUCCESS 1 in 4.534 seconds
-[0m16:16:48.096787 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
-
-[0m16:16:48.099580 [info ] [MainThread]: [32mAll checks passed![0m
-[0m16:16:48.103920 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 6.501386, "process_in_blocks": "4848", "process_kernel_time": 3.115406, "process_mem_max_rss": "120316", "process_out_blocks": "3728", "process_user_time": 4.100688}
-[0m16:16:48.108400 [debug] [MainThread]: Command `dbt debug` succeeded at 16:16:48.108103 after 6.51 seconds
-[0m16:16:48.111032 [debug] [MainThread]: Connection 'debug' was left open.
-[0m16:16:48.117557 [debug] [MainThread]: On debug: Close
-[0m16:16:48.300216 [debug] [MainThread]: Flushing usage events
+   Loading packages.yml
+ Succeeded [  1.68s] model AIRBYTE_SCHEMA_staging.stg_avito_cars (view)
+ Succeeded [  3.01s] model AIRBYTE_SCHEMA_staging.test_raw_structure (view)
+    Passed [  0.98s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_brand
+    Passed [  1.48s] test  AIRBYTE_SCHEMA_dbt_test__audit.unique_stg_avito_cars_source_id
+    Passed [  2.10s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_price_dh
+    Passed [  2.20s] test  AIRBYTE_SCHEMA_dbt_test__audit.not_null_stg_avito_cars_source_id
+ Succeeded [  2.25s] model AIRBYTE_SCHEMA_analytics.fct_car_market_analysis (table)
+ Succeeded [  2.25s] model AIRBYTE_SCHEMA_intermediate.int_car_features (table)
+ Succeeded [  1.13s] model AIRBYTE_SCHEMA_analytics.dim_geographic_analysis (table)
+  Finished 'build' target 'dev' in 11s 233ms
