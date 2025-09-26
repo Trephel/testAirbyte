@@ -11,3 +11,123 @@ dbt-fusion 2.0.0-preview.25
  Succeeded [  2.25s] model AIRBYTE_SCHEMA_intermediate.int_car_features (table)
  Succeeded [  1.13s] model AIRBYTE_SCHEMA_analytics.dim_geographic_analysis (table)
   Finished 'build' target 'dev' in 11s 233ms
+[0m09:22:16.838100 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:22:16.899463 | 30f105fa-9252-47f5-91a0-7af9e7666b6b ==============================
+[0m09:22:16.899463 [info ] [MainThread]: Running with dbt=1.9.0
+[0m09:22:16.902540 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'fail_fast': 'False', 'profiles_dir': '/usr/app', 'log_path': '/usr/app/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'None', 'log_format': 'default', 'introspect': 'True', 'invocation_command': 'dbt debug --project-dir /usr/app --profiles-dir /usr/app', 'static_parser': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m09:22:16.968297 [info ] [MainThread]: dbt version: 1.9.0
+[0m09:22:16.970561 [info ] [MainThread]: python version: 3.11.2
+[0m09:22:16.974796 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m09:22:16.978094 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m09:22:18.411252 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m09:22:18.414189 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m09:22:18.417521 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m09:22:18.421921 [info ] [MainThread]: adapter type: snowflake
+[0m09:22:18.426587 [info ] [MainThread]: adapter version: 1.9.0
+[0m09:22:18.779436 [info ] [MainThread]: Configuration:
+[0m09:22:18.781687 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:22:18.784134 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:22:18.786455 [info ] [MainThread]: Required dependencies:
+[0m09:22:18.789089 [debug] [MainThread]: Executing "git --help"
+[0m09:22:18.870554 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:22:18.876462 [debug] [MainThread]: STDERR: "b''"
+[0m09:22:18.878725 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:22:18.883580 [info ] [MainThread]: Connection:
+[0m09:22:18.886536 [info ] [MainThread]:   account: szvttdq-bs56030
+[0m09:22:18.889927 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m09:22:18.902866 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m09:22:18.908164 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m09:22:18.913956 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m09:22:18.917703 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m09:22:18.924332 [info ] [MainThread]:   authenticator: None
+[0m09:22:18.927890 [info ] [MainThread]:   oauth_client_id: None
+[0m09:22:18.931528 [info ] [MainThread]:   query_tag: None
+[0m09:22:18.935815 [info ] [MainThread]:   client_session_keep_alive: False
+[0m09:22:18.944808 [info ] [MainThread]:   host: None
+[0m09:22:18.950222 [info ] [MainThread]:   port: None
+[0m09:22:18.960951 [info ] [MainThread]:   proxy_host: None
+[0m09:22:18.964081 [info ] [MainThread]:   proxy_port: None
+[0m09:22:18.967086 [info ] [MainThread]:   protocol: None
+[0m09:22:18.970200 [info ] [MainThread]:   connect_retries: 1
+[0m09:22:18.973698 [info ] [MainThread]:   connect_timeout: None
+[0m09:22:18.976766 [info ] [MainThread]:   retry_on_database_errors: False
+[0m09:22:18.979535 [info ] [MainThread]:   retry_all: False
+[0m09:22:18.982314 [info ] [MainThread]:   insecure_mode: False
+[0m09:22:18.984915 [info ] [MainThread]:   reuse_connections: True
+[0m09:22:18.988103 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m09:22:19.199162 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m09:22:19.600666 [debug] [MainThread]: Using snowflake connection "debug"
+[0m09:22:19.608257 [debug] [MainThread]: On debug: select 1 as id
+[0m09:22:19.616116 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:22:21.987938 [debug] [MainThread]: SQL status: SUCCESS 1 in 2.372 seconds
+[0m09:22:21.990579 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:22:21.993534 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:22:21.999129 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 5.3167505, "process_in_blocks": "117960", "process_kernel_time": 3.805297, "process_mem_max_rss": "119980", "process_out_blocks": "3776", "process_user_time": 5.060278}
+[0m09:22:22.002027 [debug] [MainThread]: Command `dbt debug` succeeded at 09:22:22.001697 after 5.32 seconds
+[0m09:22:22.004473 [debug] [MainThread]: Connection 'debug' was left open.
+[0m09:22:22.006585 [debug] [MainThread]: On debug: Close
+[0m09:22:22.192847 [debug] [MainThread]: Flushing usage events
+[0m11:14:30.867055 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 11:14:30.896830 | 10a7cee1-5e19-499e-8eb2-c969259e6f27 ==============================
+[0m11:14:30.896830 [info ] [MainThread]: Running with dbt=1.9.0
+[0m11:14:30.899340 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'fail_fast': 'False', 'log_path': '/usr/app/logs', 'profiles_dir': '/usr/app', 'version_check': 'True', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt debug --project-dir /usr/app --profiles-dir /usr/app', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptions(include=[], exclude=[])', 'send_anonymous_usage_stats': 'True'}
+[0m11:14:30.938816 [info ] [MainThread]: dbt version: 1.9.0
+[0m11:14:30.941359 [info ] [MainThread]: python version: 3.11.2
+[0m11:14:30.943911 [info ] [MainThread]: python path: /usr/local/bin/python
+[0m11:14:30.947187 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.31
+[0m11:14:31.744251 [info ] [MainThread]: Using profiles dir at /usr/app
+[0m11:14:31.747005 [info ] [MainThread]: Using profiles.yml file at /usr/app/profiles.yml
+[0m11:14:31.749681 [info ] [MainThread]: Using dbt_project.yml file at /usr/app/dbt_project.yml
+[0m11:14:31.753325 [info ] [MainThread]: adapter type: snowflake
+[0m11:14:31.756372 [info ] [MainThread]: adapter version: 1.9.0
+[0m11:14:32.002921 [info ] [MainThread]: Configuration:
+[0m11:14:32.005651 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m11:14:32.008071 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m11:14:32.010449 [info ] [MainThread]: Required dependencies:
+[0m11:14:32.013460 [debug] [MainThread]: Executing "git --help"
+[0m11:14:32.069148 [debug] [MainThread]: STDOUT: "b"usage: git [--version] [--help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone             Clone a repository into a new directory\n   init              Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add               Add file contents to the index\n   mv                Move or rename a file, a directory, or a symlink\n   restore           Restore working tree files\n   rm                Remove files from the working tree and from the index\n   sparse-checkout   Initialize and modify the sparse-checkout\n\nexamine the history and state (see also: git help revisions)\n   bisect            Use binary search to find the commit that introduced a bug\n   diff              Show changes between commits, commit and working tree, etc\n   grep              Print lines matching a pattern\n   log               Show commit logs\n   show              Show various types of objects\n   status            Show the working tree status\n\ngrow, mark and tweak your common history\n   branch            List, create, or delete branches\n   commit            Record changes to the repository\n   merge             Join two or more development histories together\n   rebase            Reapply commits on top of another base tip\n   reset             Reset current HEAD to the specified state\n   switch            Switch branches\n   tag               Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch             Download objects and refs from another repository\n   pull              Fetch from and integrate with another repository or a local branch\n   push              Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m11:14:32.071010 [debug] [MainThread]: STDERR: "b''"
+[0m11:14:32.072843 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m11:14:32.075152 [info ] [MainThread]: Connection:
+[0m11:14:32.078297 [info ] [MainThread]:   account: szvttdq-bs56030
+[0m11:14:32.081476 [info ] [MainThread]:   user: AIRBYTE_USER
+[0m11:14:32.084394 [info ] [MainThread]:   database: AIRBYTE_DATABASE
+[0m11:14:32.087454 [info ] [MainThread]:   warehouse: AIRBYTE_WAREHOUSE
+[0m11:14:32.090884 [info ] [MainThread]:   role: AIRBYTE_ROLE
+[0m11:14:32.093284 [info ] [MainThread]:   schema: AIRBYTE_SCHEMA
+[0m11:14:32.097419 [info ] [MainThread]:   authenticator: None
+[0m11:14:32.100232 [info ] [MainThread]:   oauth_client_id: None
+[0m11:14:32.103292 [info ] [MainThread]:   query_tag: None
+[0m11:14:32.105903 [info ] [MainThread]:   client_session_keep_alive: False
+[0m11:14:32.108387 [info ] [MainThread]:   host: None
+[0m11:14:32.111213 [info ] [MainThread]:   port: None
+[0m11:14:32.114190 [info ] [MainThread]:   proxy_host: None
+[0m11:14:32.117156 [info ] [MainThread]:   proxy_port: None
+[0m11:14:32.119973 [info ] [MainThread]:   protocol: None
+[0m11:14:32.122324 [info ] [MainThread]:   connect_retries: 1
+[0m11:14:32.125306 [info ] [MainThread]:   connect_timeout: None
+[0m11:14:32.128175 [info ] [MainThread]:   retry_on_database_errors: False
+[0m11:14:32.132026 [info ] [MainThread]:   retry_all: False
+[0m11:14:32.135601 [info ] [MainThread]:   insecure_mode: False
+[0m11:14:32.138014 [info ] [MainThread]:   reuse_connections: True
+[0m11:14:32.141077 [info ] [MainThread]: Registered adapter: snowflake=1.9.0
+[0m11:14:32.289082 [debug] [MainThread]: Acquiring new snowflake connection 'debug'
+[0m11:14:32.430473 [debug] [MainThread]: Using snowflake connection "debug"
+[0m11:14:32.433310 [debug] [MainThread]: On debug: select 1 as id
+[0m11:14:32.435511 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:14:34.053831 [debug] [MainThread]: SQL status: SUCCESS 1 in 1.618 seconds
+[0m11:14:34.057151 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m11:14:34.059857 [info ] [MainThread]: [32mAll checks passed![0m
+[0m11:14:34.065965 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 3.3185785, "process_in_blocks": "43368", "process_kernel_time": 2.883217, "process_mem_max_rss": "120008", "process_out_blocks": "3776", "process_user_time": 3.945243}
+[0m11:14:34.068120 [debug] [MainThread]: Command `dbt debug` succeeded at 11:14:34.067901 after 3.32 seconds
+[0m11:14:34.069784 [debug] [MainThread]: Connection 'debug' was left open.
+[0m11:14:34.071505 [debug] [MainThread]: On debug: Close
+[0m11:14:34.516040 [debug] [MainThread]: Flushing usage events

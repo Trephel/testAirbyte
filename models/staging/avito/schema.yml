@@ -2,20 +2,14 @@ version: 2
 
 models:
   - name: stg_avito_cars
-    description: "Table staging nettoyée pour les voitures Avito"
     columns:
       - name: source_id
-        description: "ID source depuis le dataset original"
         tests:
           - unique
           - not_null
-          
       - name: brand
-        description: "Marque du véhicule"
         tests:
           - not_null
-          
       - name: price_dh
-        description: "Prix en dirhams"
         tests:
           - not_null
