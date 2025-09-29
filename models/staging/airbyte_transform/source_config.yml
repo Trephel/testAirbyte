@@ -1,0 +1,9 @@
+version: 2
+
+sources:
+  - name: airbyte_raw
+    database: AIRBYTE_DATABASE
+    schema: AIRBYTE_SCHEMA
+    tables:
+      - name: _AIRBYTE_RAW_AVITOCARDATASET
+        description: "Table brute Airbyte pour le dataset AvitoCar"
