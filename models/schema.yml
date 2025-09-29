@@ -1,0 +1,23 @@
+version: 2
+
+models:
+  - name: fact_annonces
+    description: "Table de fait principale pour les annonces de véhicules"
+    columns:
+      - name: annonce_id
+        description: "Identifiant unique de l'annonce"
+      - name: vehicule_id
+        description: "Clé étrangère vers dim_vehicules"
+      - name: geographie_id
+        description: "Clé étrangère vers dim_geographie"
+      - name: equipement_id
+        description: "Clé étrangère vers dim_equipements"
+
+  - name: dim_vehicules
+    description: "Table de dimension pour les caractéristiques des véhicules"
+    
+  - name: dim_geographie
+    description: "Table de dimension pour la localisation"
+    
+  - name: dim_equipements
+    description: "Table de dimension pour les équipements"
